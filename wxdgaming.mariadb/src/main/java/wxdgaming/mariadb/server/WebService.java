@@ -67,7 +67,7 @@ public class WebService {
             RunAsync.async(() -> {
                 DBFactory.getIns().stop();
                 clearFile("data-base/data");
-                System.exit(1);
+                System.exit(0);
                 Runtime.getRuntime().halt(0);
             });
         });

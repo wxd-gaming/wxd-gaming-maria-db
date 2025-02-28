@@ -18941,6 +18941,8 @@
   }, {
     "pattern":"\\Qwxdgaming/mariadb/server/MyDB.class\\E"
   }, {
+    "pattern":"\\Qwxdgaming/mariadb/server/WebService$1.class\\E"
+  }, {
     "pattern":"\\Qwxdgaming/mariadb/server/WebService.class\\E"
   }, {
     "pattern":"\\Qwxdgaming/mariadb/server/\\E"

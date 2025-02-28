@@ -29,6 +29,11 @@
   "methods":[{"name":"<init>","parameterTypes":[] }]
 },
 {
+  "name":"ch.qos.logback.core.ConsoleAppender",
+  "queryAllPublicMethods":true,
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
   "name":"ch.qos.logback.core.FileAppender",
   "methods":[{"name":"setAppend","parameterTypes":["boolean"] }, {"name":"valueOf","parameterTypes":["java.lang.String"] }]
 },
@@ -181,6 +186,9 @@
 {
   "name":"java.nio.charset.Charset",
   "methods":[{"name":"valueOf","parameterTypes":["java.lang.String"] }]
+},
+{
+  "name":"java.nio.file.SimpleFileVisitor"
 },
 {
   "name":"java.security.AlgorithmParametersSpi"

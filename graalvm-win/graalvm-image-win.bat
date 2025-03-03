@@ -14,11 +14,11 @@ set option=%option% --allow-incomplete-classpath
 @REM set option=%option% --link-at-build-time
 
 
-set option=%option% --initialize-at-build-time=com.sh
+set option=%option% --initialize-at-build-time=wxdgaming.mariadb
 
 :: build-time
 
-set option=%option% --initialize-at-run-time=com.sh
+set option=%option% --initialize-at-run-time=wxdgaming.mariadb
 
 
 ::<!--新增-->
@@ -30,7 +30,7 @@ set option=%option% --trace-class-initialization=com.sun.beans.introspect.Method
 set option=%option% --trace-class-initialization=com.sun.beans.TypeResolver
 set option=%option% --trace-class-initialization=java.beans.Introspector
 set option=%option% --trace-class-initialization=java.beans.ThreadGroupContext
-set option=%option% --trace-class-initialization=com.sh
+set option=%option% --trace-class-initialization=wxdgaming.mariadb
 set option=%option% --trace-object-instantiation=java.util.jar.JarFile
 
 

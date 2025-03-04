@@ -30,7 +30,7 @@ public class ApplicationMain {
 
 
     public static void initGraalvm() throws Exception {
-        if ("true".equalsIgnoreCase(System.getProperty("build.graalvm"))) {
+        if (!"true".equalsIgnoreCase(System.getProperty("build.graalvm"))) {
             return;
         }
         System.setProperty("build.graalvm", "");

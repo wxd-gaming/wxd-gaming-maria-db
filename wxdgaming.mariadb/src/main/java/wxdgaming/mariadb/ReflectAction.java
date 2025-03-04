@@ -70,7 +70,7 @@ public class ReflectAction {
                     Constructor<?> findMethod = cls.getDeclaredConstructor(declaredConstructor.getParameterTypes());
                     log.info("reflectActionConstructor: {}", findMethod);
                     findMethod.setAccessible(true);
-                    findMethod.newInstance();
+                    findMethod.newInstance(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1);
                 } catch (Throwable ignore) {}
             }
         }
@@ -81,7 +81,7 @@ public class ReflectAction {
                     Method findMethod = cls.getDeclaredMethod(method.getName(), method.getParameterTypes());
                     log.info("reflectActionDeclaredMethod: {}", findMethod);
                     findMethod.setAccessible(true);
-                    findMethod.invoke(null);
+                    findMethod.invoke(null, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1);
                 } catch (Throwable ignore) {}
             }
         }
@@ -92,7 +92,7 @@ public class ReflectAction {
                     Method findMethod = cls.getMethod(method.getName(), method.getParameterTypes());
                     log.info("reflectActionMethod: {}", findMethod);
                     findMethod.setAccessible(true);
-                    findMethod.invoke(null);
+                    findMethod.invoke(null, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1);
                 } catch (Throwable ignore) {}
             }
         }
@@ -105,7 +105,7 @@ public class ReflectAction {
                 try {
                     log.info("reflectActionDeclaredField: {}", cls.getDeclaredField(field.getName()));
                     field.setAccessible(true);
-                    field.set(null, null);
+                    field.get(null);
                 } catch (Throwable ignore) {}
             }
         }
@@ -115,7 +115,7 @@ public class ReflectAction {
                 try {
                     log.info("reflectActionField: {}", cls.getField(field.getName()));
                     field.setAccessible(true);
-                    field.set(null, null);
+                    field.get(null);
                 } catch (Throwable ignore) {}
             }
         }
@@ -145,7 +145,7 @@ public class ReflectAction {
             if (!fileExists) {/*当本地文件不存在才查找资源文件*/
                 URL resource = classLoader.getResource(path);
                 if (resource != null) {
-                    findPath = URLDecoder.decode(resource.getPath(), StandardCharsets.UTF_8.toString());
+                    findPath = URLDecoder.decode(resource.getPath(), StandardCharsets.UTF_8);
                     if (findPath.startsWith("/")) {
                         findPath = findPath.substring(1);
                     }

@@ -1,7 +1,6 @@
 package wxdgaming.mariadb;
 
 import lombok.extern.slf4j.Slf4j;
-import org.apache.commons.lang3.StringUtils;
 import wxdgaming.mariadb.server.DBFactory;
 import wxdgaming.mariadb.server.WebService;
 
@@ -31,7 +30,7 @@ public class ApplicationMain {
 
 
     public static void initGraalvm() throws Exception {
-        if (StringUtils.isBlank(System.getProperty("build.graalvm"))) {
+        if ("true".equalsIgnoreCase(System.getProperty("build.graalvm"))) {
             return;
         }
         System.setProperty("build.graalvm", "");

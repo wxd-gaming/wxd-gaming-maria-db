@@ -2,6 +2,7 @@ package wxdgaming.mariadb;
 
 import lombok.Getter;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.lang3.StringUtils;
 
 import java.io.ByteArrayInputStream;
 import java.io.File;
@@ -10,7 +11,6 @@ import java.io.InputStream;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
-import java.lang.reflect.Modifier;
 import java.net.URL;
 import java.net.URLDecoder;
 import java.nio.charset.StandardCharsets;
@@ -44,11 +44,11 @@ public class ReflectAction {
 
     private final Set<Class<?>> notConstructor0List = new HashSet<>();
 
-    public void action(Class<?> cls, boolean checkPackage) {
+    public void action(Class<?> cls, String packageName) {
         if (cls == Object.class) return;
-        if (checkPackage && (!cls.getName().startsWith("wxdgaming.mariadb")))
+        if (cls.getSuperclass() != null) action(cls.getSuperclass(), packageName);
+        if (StringUtils.isNotBlank(packageName) && !cls.getName().startsWith(packageName))
             return;
-        if (cls.getSuperclass() != null) action(cls.getSuperclass(), checkPackage);
 
         actionField(cls);
         actionMethod(cls);
@@ -66,38 +66,58 @@ public class ReflectAction {
             }
             Constructor<?>[] declaredConstructors = cls.getDeclaredConstructors();
             for (Constructor<?> declaredConstructor : declaredConstructors) {
-                if (Modifier.isStatic(declaredConstructor.getModifiers())) {
-                    continue;
-                }
                 try {
-                    Object findMethod = cls.getDeclaredConstructor(declaredConstructor.getParameterTypes());
-                    log.info("reflectActionMethod: " + findMethod);
+                    Constructor<?> findMethod = cls.getDeclaredConstructor(declaredConstructor.getParameterTypes());
+                    log.info("reflectActionConstructor: {}", findMethod);
+                    findMethod.setAccessible(true);
+                    findMethod.newInstance();
                 } catch (Throwable ignore) {}
             }
         }
         {
             Method[] declaredMethods = cls.getDeclaredMethods();
             for (Method method : declaredMethods) {
-                if (Modifier.isStatic(method.getModifiers())) {
-                    continue;
-                }
                 try {
                     Method findMethod = cls.getDeclaredMethod(method.getName(), method.getParameterTypes());
-                    log.info("reflectActionMethod: " + findMethod);
+                    log.info("reflectActionDeclaredMethod: {}", findMethod);
+                    findMethod.setAccessible(true);
+                    findMethod.invoke(null);
+                } catch (Throwable ignore) {}
+            }
+        }
+        {
+            Method[] declaredMethods = cls.getMethods();
+            for (Method method : declaredMethods) {
+                try {
+                    Method findMethod = cls.getMethod(method.getName(), method.getParameterTypes());
+                    log.info("reflectActionMethod: {}", findMethod);
+                    findMethod.setAccessible(true);
+                    findMethod.invoke(null);
                 } catch (Throwable ignore) {}
             }
         }
     }
 
     public void actionField(Class<?> cls) {
-        Field[] declaredFields = cls.getDeclaredFields();
-        for (Field field : declaredFields) {
-            if (Modifier.isStatic(field.getModifiers())) {
-                continue;
+        {
+            Field[] declaredFields = cls.getDeclaredFields();
+            for (Field field : declaredFields) {
+                try {
+                    log.info("reflectActionDeclaredField: {}", cls.getDeclaredField(field.getName()));
+                    field.setAccessible(true);
+                    field.set(null, null);
+                } catch (Throwable ignore) {}
             }
-            try {
-                log.info("reflectActionField: " + cls.getDeclaredField(field.getName()));
-            } catch (Throwable ignore) {}
+        }
+        {
+            Field[] declaredFields = cls.getFields();
+            for (Field field : declaredFields) {
+                try {
+                    log.info("reflectActionField: {}", cls.getField(field.getName()));
+                    field.setAccessible(true);
+                    field.set(null, null);
+                } catch (Throwable ignore) {}
+            }
         }
     }
 

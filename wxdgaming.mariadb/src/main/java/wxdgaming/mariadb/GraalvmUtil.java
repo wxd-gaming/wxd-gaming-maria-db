@@ -2,21 +2,17 @@ package wxdgaming.mariadb;
 
 import java.io.File;
 import java.io.IOException;
-import java.io.InputStream;
 import java.lang.management.ManagementFactory;
 import java.lang.management.RuntimeMXBean;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
-import java.util.stream.Collectors;
+import java.util.*;
+import java.util.function.Predicate;
+import java.util.jar.JarEntry;
+import java.util.jar.JarFile;
 import java.util.stream.Stream;
-import java.util.zip.ZipEntry;
-import java.util.zip.ZipInputStream;
 
 public class GraalvmUtil {
 
@@ -63,33 +59,25 @@ public class GraalvmUtil {
             // 构建包含 start 命令的命令数组
             String[] command = {"cmd.exe", "/c", "start", "cmd.exe", "/c", cmdFilePath};
             ProcessBuilder sh = new ProcessBuilder(command);
-            asyncExeLocalCommand(null, sh);
+            asyncExeLocalCommand(sh);
             Thread.sleep(3000);
         } catch (Exception e) {
             e.printStackTrace(System.err);
         }
     }
 
-    public static void asyncExeLocalCommand(File file, ProcessBuilder pb) throws IOException {
-        // 不使用Runtime.getRuntime().exec(command)的方式,因为无法设置以下特性
-        // Java执行本地命令是启用一个子进程处理,默认情况下子进程与父进程I/O通过管道相连(默认ProcessBuilder.Redirect.PIPE)
-        // 当服务执行自身重启的命令时,父进程关闭导致管道连接中断,将导致子进程也崩溃,从而无法完成后续的启动
-        // 解决方式,(1)设置子进程IO输出重定向到指定文件;(2)设置属性子进程的I/O源或目标将与当前进程的相同,两者相互独立
-        if (file == null || !file.exists()) {
+    public static void asyncExeLocalCommand(ProcessBuilder pb) throws IOException {
+        try {
+            // 不使用Runtime.getRuntime().exec(command)的方式,因为无法设置以下特性
+            // Java执行本地命令是启用一个子进程处理,默认情况下子进程与父进程I/O通过管道相连(默认ProcessBuilder.Redirect.PIPE)
+            // 当服务执行自身重启的命令时,父进程关闭导致管道连接中断,将导致子进程也崩溃,从而无法完成后续的启动
+            // 解决方式,(1)设置子进程IO输出重定向到指定文件;(2)设置属性子进程的I/O源或目标将与当前进程的相同,两者相互独立
             // 设置属性子进程的I/O源或目标将与当前进程的相同,两者相互独立
             pb.redirectOutput(ProcessBuilder.Redirect.INHERIT);
             pb.redirectError(ProcessBuilder.Redirect.INHERIT);
             pb.redirectInput(ProcessBuilder.Redirect.INHERIT);
-        } else {
-            // 设置子进程IO输出重定向到指定文件
-            // 错误输出与标准输出,输出到一块
-            pb.redirectErrorStream(true);
-            // 设置输出日志
-            pb.redirectOutput(ProcessBuilder.Redirect.appendTo(file));
-        }
-        // 执行命令进程
-        Process start = pb.start();
-        try {
+            // 执行命令进程
+            Process start = pb.start();
             start.waitFor();
             start.destroy();
         } catch (InterruptedException e) {
@@ -101,13 +89,40 @@ public class GraalvmUtil {
         return System.getProperty("java.class.path");
     }
 
+    public static List<Class<?>> jarClasses(String... packageNames) throws Exception {
+        List<String> strings = jarResources();
+        List<Class<?>> classes = new ArrayList<>();
+        Predicate<String> predicate = string -> {
+            for (String packageName : packageNames) {
+                if (string.startsWith(packageName)) {
+                    return true;
+                }
+            }
+            return false;
+        };
+        for (String string : strings) {
+            if (string.endsWith(".class")) {
+                String substring = string.substring(0, string.length() - 6);
+                String replace = substring.replace('/', '.');
+                replace = replace.replace('\\', '.');
+                try {
+                    if (predicate.test(replace)) {
+                        Class<?> aClass = GraalvmUtil.class.getClassLoader().loadClass(replace);
+                        classes.add(aClass);
+                    }
+                } catch (Throwable ignored) {}
+            }
+        }
+        return classes;
+    }
+
     public static List<String> jarResources() throws Exception {
         List<String> resourcesPath = new ArrayList<>();
         String x = javaClassPath();
         String[] split = x.split(File.pathSeparator);
-        List<String> collect = Arrays.stream(split).sorted().collect(Collectors.toList());
+        List<String> collect = Arrays.stream(split).sorted().toList();
         for (String string : collect) {
-
+            // System.out.println(string);
             Path start = Paths.get(string);
             if (!string.endsWith(".jar") && !string.endsWith(".war") && !string.endsWith(".zip")) {
                 if (string.endsWith("classes")) {
@@ -116,28 +131,23 @@ public class GraalvmUtil {
                         stream
                                 .map(Path::toString)
                                 .filter(s -> s.startsWith(target) && s.length() > target.length())
-                                .map(s -> {
-                                    String replace = s.replace(target + File.separator, "");
-                                    if (replace.endsWith(".class")) {
-                                        replace = replace.replace(".class", "").replace(File.separator, ".");
-                                    }
-                                    return replace;
-                                })
+                                .map(s -> s.substring(target.length() + 1))
                                 .forEach(resourcesPath::add);
                     }
                     continue;
                 }
-                System.out.println(string);
                 continue;
             }
 
-            try (InputStream inputStream = Files.newInputStream(start);
-                 ZipInputStream zipInputStream = new ZipInputStream(inputStream)) {
-                ZipEntry nextEntry = null;
-                while ((nextEntry = zipInputStream.getNextEntry()) != null) {
-                    /* todo 读取的资源字节可以做解密操作 */
-                    resourcesPath.add(nextEntry.getName());
+            try (JarFile jarFile = new JarFile(string)) {
+                Enumeration<JarEntry> entries = jarFile.entries();
+                while (entries.hasMoreElements()) {
+                    JarEntry jarEntry = entries.nextElement();
+                    String entryName = jarEntry.getName();
+                    resourcesPath.add(entryName);
                 }
+            } catch (Exception e) {
+                throw new RuntimeException(e);
             }
         }
         Collections.sort(resourcesPath);
@@ -155,5 +165,4 @@ public class GraalvmUtil {
         }
 
     }
-
 }

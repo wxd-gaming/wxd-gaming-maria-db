@@ -1,7 +1,7 @@
 package wxdgaming.mariadb;
 
 import lombok.extern.slf4j.Slf4j;
-import org.reflections.Reflections;
+import org.apache.commons.lang3.StringUtils;
 import wxdgaming.mariadb.server.DBFactory;
 import wxdgaming.mariadb.server.WebService;
 
@@ -31,28 +31,24 @@ public class ApplicationMain {
 
 
     public static void initGraalvm() throws Exception {
-        if (System.getProperty("build.graalvm") != null) {
-            ClassLoader contextClassLoader = Thread.currentThread().getContextClassLoader();
-            List<String> strings = GraalvmUtil.jarResources();
-            for (String string : strings) {
-                URL resource = contextClassLoader.getResource(string);
-                log.info("{} - {}", string, resource);
-            }
-
-            reflectAction("com.sun.javafx");
-            reflectAction("javafx");
-            reflectAction("wxdgaming");
+        if (StringUtils.isBlank(System.getProperty("build.graalvm"))) {
+            return;
         }
-    }
+        System.setProperty("build.graalvm", "");
+        ClassLoader contextClassLoader = Thread.currentThread().getContextClassLoader();
+        List<String> strings = GraalvmUtil.jarResources();
+        for (String string : strings) {
+            URL resource = contextClassLoader.getResource(string);
+            log.info("{} - {}", string, resource);
+        }
 
-    public static void reflectAction(String packageName) {
         ReflectAction reflectAction = ReflectAction.of();
-        Reflections reflections = new Reflections(packageName);
-        reflections.getSubTypesOf(Object.class).stream().parallel().forEach(clazz -> {
-            try {
-                reflectAction.action(clazz, false);
-            } catch (Exception ignored) {}
-        });
+
+        List<Class<?>> classes = GraalvmUtil.jarClasses("wxdgaming");
+        for (Class<?> cls : classes) {
+            reflectAction.action(cls, cls.getPackageName());
+        }
+        Thread.sleep(10000);
     }
 
     public static void startDb(boolean checked) throws Exception {

@@ -25073,6 +25073,40 @@
   }, {
     "pattern":"\\Qorg/apache/commons/lang3/builder/DiffBuilder$1.class\\E"
   }, {
+    "pattern":"\\Qorg/apache/commons/lang3/builder/DiffBuilder$10.class\\E"
+  }, {
+    "pattern":"\\Qorg/apache/commons/lang3/builder/DiffBuilder$11.class\\E"
+  }, {
+    "pattern":"\\Qorg/apache/commons/lang3/builder/DiffBuilder$12.class\\E"
+  }, {
+    "pattern":"\\Qorg/apache/commons/lang3/builder/DiffBuilder$13.class\\E"
+  }, {
+    "pattern":"\\Qorg/apache/commons/lang3/builder/DiffBuilder$14.class\\E"
+  }, {
+    "pattern":"\\Qorg/apache/commons/lang3/builder/DiffBuilder$15.class\\E"
+  }, {
+    "pattern":"\\Qorg/apache/commons/lang3/builder/DiffBuilder$16.class\\E"
+  }, {
+    "pattern":"\\Qorg/apache/commons/lang3/builder/DiffBuilder$17.class\\E"
+  }, {
+    "pattern":"\\Qorg/apache/commons/lang3/builder/DiffBuilder$18.class\\E"
+  }, {
+    "pattern":"\\Qorg/apache/commons/lang3/builder/DiffBuilder$2.class\\E"
+  }, {
+    "pattern":"\\Qorg/apache/commons/lang3/builder/DiffBuilder$3.class\\E"
+  }, {
+    "pattern":"\\Qorg/apache/commons/lang3/builder/DiffBuilder$4.class\\E"
+  }, {
+    "pattern":"\\Qorg/apache/commons/lang3/builder/DiffBuilder$5.class\\E"
+  }, {
+    "pattern":"\\Qorg/apache/commons/lang3/builder/DiffBuilder$6.class\\E"
+  }, {
+    "pattern":"\\Qorg/apache/commons/lang3/builder/DiffBuilder$7.class\\E"
+  }, {
+    "pattern":"\\Qorg/apache/commons/lang3/builder/DiffBuilder$8.class\\E"
+  }, {
+    "pattern":"\\Qorg/apache/commons/lang3/builder/DiffBuilder$9.class\\E"
+  }, {
     "pattern":"\\Qorg/apache/commons/lang3/builder/DiffBuilder$Builder.class\\E"
   }, {
     "pattern":"\\Qorg/apache/commons/lang3/builder/DiffBuilder$SDiff.class\\E"
@@ -25681,6 +25715,10 @@
   }, {
     "pattern":"\\Qorg/apache/commons/lang3/time/FastTimeZone.class\\E"
   }, {
+    "pattern":"\\Qorg/apache/commons/lang3/time/FormatCache$ArrayKey.class\\E"
+  }, {
+    "pattern":"\\Qorg/apache/commons/lang3/time/FormatCache.class\\E"
+  }, {
     "pattern":"\\Qorg/apache/commons/lang3/time/GmtTimeZone.class\\E"
   }, {
     "pattern":"\\Qorg/apache/commons/lang3/time/StopWatch$1.class\\E"
@@ -25713,7 +25751,11 @@
   }, {
     "pattern":"\\Qorg/apache/commons/lang3/tuple/MutableTriple.class\\E"
   }, {
+    "pattern":"\\Qorg/apache/commons/lang3/tuple/Pair$PairAdapter.class\\E"
+  }, {
     "pattern":"\\Qorg/apache/commons/lang3/tuple/Pair.class\\E"
+  }, {
+    "pattern":"\\Qorg/apache/commons/lang3/tuple/Triple$TripleAdapter.class\\E"
   }, {
     "pattern":"\\Qorg/apache/commons/lang3/tuple/Triple.class\\E"
   }, {

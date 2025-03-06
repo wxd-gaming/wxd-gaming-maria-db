@@ -16,7 +16,6 @@
         <maven.compiler.source>21</maven.compiler.source>
         <maven.compiler.target>21</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <javafx-version>21</javafx-version>
     </properties>
 
     <repositories>
@@ -50,11 +49,13 @@
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>4.13.2</version>
+            <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <version>1.18.36</version>
+            <scope>provided</scope>
         </dependency>
         <!--日志框架-->
         <dependency>
@@ -77,6 +78,12 @@
             <groupId>ch.vorburger.mariaDB4j</groupId>
             <artifactId>mariaDB4j</artifactId>
             <version>3.1.0</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>ch.vorburger.mariaDB4j</groupId>
+                    <artifactId>mariaDB4j-db-linux64</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <dependency>
             <groupId>org.mariadb.jdbc</groupId>

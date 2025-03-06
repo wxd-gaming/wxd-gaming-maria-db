@@ -31849,6 +31849,8 @@
   }, {
     "pattern":"\\Qwxdgaming/\\E"
   }, {
+    "pattern":"\\Qwxdgaming/mariadb/ApplicationMain$1.class\\E"
+  }, {
     "pattern":"\\Qwxdgaming/mariadb/ApplicationMain.class\\E"
   }, {
     "pattern":"\\Qwxdgaming/mariadb/DbConfig.class\\E"

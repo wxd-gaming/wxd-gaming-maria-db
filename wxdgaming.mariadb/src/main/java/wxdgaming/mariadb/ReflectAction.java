@@ -16,10 +16,7 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 import java.util.function.Predicate;
 import java.util.stream.Stream;
 import java.util.zip.ZipEntry;
@@ -33,6 +30,14 @@ import java.util.zip.ZipInputStream;
  **/
 @Getter
 public class ReflectAction {
+
+    public static final Object[] args;
+
+    static {
+        Object object = new Object();
+        args = new Object[50];
+        Arrays.fill(args, object);
+    }
 
     public static ReflectAction of() {
         return new ReflectAction();
@@ -68,7 +73,7 @@ public class ReflectAction {
                     Constructor<?> findMethod = cls.getDeclaredConstructor(declaredConstructor.getParameterTypes());
                     System.out.printf("reflectActionConstructor: %s\n", findMethod);
                     findMethod.setAccessible(true);
-                    findMethod.newInstance(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1);
+                    findMethod.newInstance(args);
                 } catch (Throwable ignore) {}
             }
         }
@@ -79,7 +84,7 @@ public class ReflectAction {
                     Method findMethod = cls.getDeclaredMethod(method.getName(), method.getParameterTypes());
                     System.out.printf("reflectActionDeclaredMethod: %s\n", findMethod);
                     findMethod.setAccessible(true);
-                    findMethod.invoke(null, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1);
+                    findMethod.invoke(null, args);
                 } catch (Throwable ignore) {}
             }
         }
@@ -90,7 +95,7 @@ public class ReflectAction {
                     Method findMethod = cls.getMethod(method.getName(), method.getParameterTypes());
                     System.out.printf("reflectActionMethod: %s\n", findMethod);
                     findMethod.setAccessible(true);
-                    findMethod.invoke(null, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1);
+                    findMethod.invoke(null, args);
                 } catch (Throwable ignore) {}
             }
         }

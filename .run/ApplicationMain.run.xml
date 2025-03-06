@@ -2,7 +2,7 @@
   <configuration default="false" name="ApplicationMain" type="Application" factoryName="Application" nameIsGenerated="true">
     <option name="MAIN_CLASS_NAME" value="wxdgaming.mariadb.ApplicationMain" />
     <module name="wxdgaming.mariadb" />
-    <option name="VM_PARAMETERS" value="-Dlogback.configurationFile=logback-utf8.xml" />
+    <option name="VM_PARAMETERS" value="-Dlogback.configurationFile=logback-utf8.xml -Dbuild.graalvm=true" />
     <extension name="coverage">
       <pattern>
         <option name="PATTERN" value="wxdgaming.mariadb.*" />

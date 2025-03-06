@@ -1,7 +1,6 @@
 package wxdgaming.mariadb;
 
 import lombok.Getter;
-import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 
 import java.io.ByteArrayInputStream;
@@ -32,7 +31,6 @@ import java.util.zip.ZipInputStream;
  * @author: wxd-gaming(無心道, 15388152619)
  * @version: 2024-07-15 17:51
  **/
-@Slf4j
 @Getter
 public class ReflectAction {
 
@@ -68,7 +66,7 @@ public class ReflectAction {
             for (Constructor<?> declaredConstructor : declaredConstructors) {
                 try {
                     Constructor<?> findMethod = cls.getDeclaredConstructor(declaredConstructor.getParameterTypes());
-                    log.info("reflectActionConstructor: {}", findMethod);
+                    System.out.printf("reflectActionConstructor: %s\n", findMethod);
                     findMethod.setAccessible(true);
                     findMethod.newInstance(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1);
                 } catch (Throwable ignore) {}
@@ -79,7 +77,7 @@ public class ReflectAction {
             for (Method method : declaredMethods) {
                 try {
                     Method findMethod = cls.getDeclaredMethod(method.getName(), method.getParameterTypes());
-                    log.info("reflectActionDeclaredMethod: {}", findMethod);
+                    System.out.printf("reflectActionDeclaredMethod: %s\n", findMethod);
                     findMethod.setAccessible(true);
                     findMethod.invoke(null, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1);
                 } catch (Throwable ignore) {}
@@ -90,7 +88,7 @@ public class ReflectAction {
             for (Method method : declaredMethods) {
                 try {
                     Method findMethod = cls.getMethod(method.getName(), method.getParameterTypes());
-                    log.info("reflectActionMethod: {}", findMethod);
+                    System.out.printf("reflectActionMethod: %s\n", findMethod);
                     findMethod.setAccessible(true);
                     findMethod.invoke(null, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1);
                 } catch (Throwable ignore) {}
@@ -103,7 +101,7 @@ public class ReflectAction {
             Field[] declaredFields = cls.getDeclaredFields();
             for (Field field : declaredFields) {
                 try {
-                    log.info("reflectActionDeclaredField: {}", cls.getDeclaredField(field.getName()));
+                    System.out.printf("reflectActionDeclaredField: %s\n", cls.getDeclaredField(field.getName()));
                     field.setAccessible(true);
                     field.get(null);
                 } catch (Throwable ignore) {}
@@ -113,7 +111,7 @@ public class ReflectAction {
             Field[] declaredFields = cls.getFields();
             for (Field field : declaredFields) {
                 try {
-                    log.info("reflectActionField: {}", cls.getField(field.getName()));
+                    System.out.printf("reflectActionField: %s\n", cls.getField(field.getName()));
                     field.setAccessible(true);
                     field.get(null);
                 } catch (Throwable ignore) {}

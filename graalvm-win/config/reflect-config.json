@@ -1,6 +1,15 @@
 [
 {
+  "name":"[B"
+},
+{
+  "name":"[Ljava.lang.String;"
+},
+{
   "name":"[Lorg.springframework.util.ConcurrentReferenceHashMap$Segment;"
+},
+{
+  "name":"[Lsun.security.pkcs.SignerInfo;"
 },
 {
   "name":"ch.qos.logback.classic.BasicConfigurator",
@@ -96,7 +105,8 @@
   "methods":[{"name":"<init>","parameterTypes":[] }]
 },
 {
-  "name":"ch.vorburger.mariadb4j.DB"
+  "name":"ch.vorburger.mariadb4j.DB",
+  "methods":[{"name":"createDB","parameterTypes":["java.lang.String"] }, {"name":"createDB","parameterTypes":["java.lang.String","java.lang.String","java.lang.String"] }, {"name":"dumpSQL","parameterTypes":["java.io.File","java.lang.String","java.lang.String","java.lang.String"] }, {"name":"dumpXML","parameterTypes":["java.io.File","java.lang.String","java.lang.String","java.lang.String"] }, {"name":"getConfiguration","parameterTypes":[] }, {"name":"newEmbeddedDB","parameterTypes":["int"] }, {"name":"newEmbeddedDB","parameterTypes":["ch.vorburger.mariadb4j.DBConfiguration"] }, {"name":"run","parameterTypes":["java.lang.String"] }, {"name":"run","parameterTypes":["java.lang.String","java.lang.String","java.lang.String"] }, {"name":"run","parameterTypes":["java.lang.String","java.lang.String","java.lang.String","java.lang.String"] }, {"name":"run","parameterTypes":["java.lang.String","java.lang.String","java.lang.String","java.lang.String","boolean"] }, {"name":"run","parameterTypes":["java.lang.String","java.lang.String","java.lang.String","java.lang.String","boolean","boolean"] }, {"name":"source","parameterTypes":["java.io.InputStream"] }, {"name":"source","parameterTypes":["java.io.InputStream","java.lang.String"] }, {"name":"source","parameterTypes":["java.io.InputStream","java.lang.String","java.lang.String","java.lang.String"] }, {"name":"source","parameterTypes":["java.lang.String"] }, {"name":"source","parameterTypes":["java.lang.String","java.lang.String"] }, {"name":"source","parameterTypes":["java.lang.String","java.lang.String","java.lang.String","java.lang.String"] }, {"name":"source","parameterTypes":["java.lang.String","java.lang.String","java.lang.String","java.lang.String","boolean"] }]
 },
 {
   "name":"com.sun.crypto.provider.AESCipher$General",
@@ -127,12 +137,135 @@
   "methods":[{"name":"<init>","parameterTypes":[] }]
 },
 {
+  "name":"com.sun.crypto.provider.TlsKeyMaterialGenerator",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
   "name":"com.sun.crypto.provider.TlsMasterSecretGenerator",
   "methods":[{"name":"<init>","parameterTypes":[] }]
 },
 {
+  "name":"com.sun.crypto.provider.TlsPrfGenerator$V12",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"com.sun.glass.ui.Screen"
+},
+{
+  "name":"com.sun.glass.ui.win.WinDnDClipboard"
+},
+{
+  "name":"com.sun.glass.ui.win.WinGestureSupport"
+},
+{
+  "name":"com.sun.glass.ui.win.WinPlatformFactory",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"com.sun.javafx.font.directwrite.DWFactory",
+  "methods":[{"name":"getFactory","parameterTypes":[] }]
+},
+{
+  "name":"com.sun.javafx.fxml.builder.web.WebViewBuilder",
+  "methods":[{"name":"build","parameterTypes":[] }, {"name":"create","parameterTypes":[] }]
+},
+{
+  "name":"com.sun.javafx.logging.PrintLogger",
+  "methods":[{"name":"createInstance","parameterTypes":[] }]
+},
+{
+  "name":"com.sun.javafx.logging.jfr.JFRPulseLogger",
+  "methods":[{"name":"createInstance","parameterTypes":[] }]
+},
+{
+  "name":"com.sun.javafx.reflect.Trampoline",
+  "methods":[{"name":"invoke","parameterTypes":["java.lang.reflect.Method","java.lang.Object","java.lang.Object[]"] }]
+},
+{
+  "name":"com.sun.javafx.scene.control.skin.Utils",
+  "methods":[{"name":"getResource","parameterTypes":["java.lang.String"] }]
+},
+{
+  "name":"com.sun.javafx.tk.quantum.QuantumToolkit",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"com.sun.javafx.webkit.theme.ScrollBarWidget"
+},
+{
   "name":"com.sun.org.apache.xerces.internal.jaxp.SAXParserFactoryImpl",
   "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"com.sun.prism.GraphicsPipeline",
+  "methods":[{"name":"getFontFactory","parameterTypes":[] }, {"name":"getPipeline","parameterTypes":[] }]
+},
+{
+  "name":"com.sun.prism.d3d.D3DPipeline",
+  "methods":[{"name":"getInstance","parameterTypes":[] }]
+},
+{
+  "name":"com.sun.prism.shader.FillPgram_Color_Loader",
+  "methods":[{"name":"loadShader","parameterTypes":["com.sun.prism.ps.ShaderFactory","java.io.InputStream"] }]
+},
+{
+  "name":"com.sun.prism.shader.FillPgram_LinearGradient_PAD_Loader",
+  "methods":[{"name":"loadShader","parameterTypes":["com.sun.prism.ps.ShaderFactory","java.io.InputStream"] }]
+},
+{
+  "name":"com.sun.prism.shader.FillRoundRect_Color_Loader",
+  "methods":[{"name":"loadShader","parameterTypes":["com.sun.prism.ps.ShaderFactory","java.io.InputStream"] }]
+},
+{
+  "name":"com.sun.prism.shader.Mask_TextureSuper_Loader",
+  "methods":[{"name":"loadShader","parameterTypes":["com.sun.prism.ps.ShaderFactory","java.io.InputStream"] }]
+},
+{
+  "name":"com.sun.prism.shader.Solid_Color_Loader",
+  "methods":[{"name":"loadShader","parameterTypes":["com.sun.prism.ps.ShaderFactory","java.io.InputStream"] }]
+},
+{
+  "name":"com.sun.prism.shader.Solid_TextureFirstPassLCD_Loader",
+  "methods":[{"name":"loadShader","parameterTypes":["com.sun.prism.ps.ShaderFactory","java.io.InputStream"] }]
+},
+{
+  "name":"com.sun.prism.shader.Solid_TextureRGB_Loader",
+  "methods":[{"name":"loadShader","parameterTypes":["com.sun.prism.ps.ShaderFactory","java.io.InputStream"] }]
+},
+{
+  "name":"com.sun.prism.shader.Solid_TextureSecondPassLCD_Loader",
+  "methods":[{"name":"loadShader","parameterTypes":["com.sun.prism.ps.ShaderFactory","java.io.InputStream"] }]
+},
+{
+  "name":"com.sun.prism.shader.Texture_Color_Loader",
+  "methods":[{"name":"loadShader","parameterTypes":["com.sun.prism.ps.ShaderFactory","java.io.InputStream"] }]
+},
+{
+  "name":"com.sun.prism.shader.Texture_LinearGradient_PAD_Loader",
+  "methods":[{"name":"loadShader","parameterTypes":["com.sun.prism.ps.ShaderFactory","java.io.InputStream"] }]
+},
+{
+  "name":"com.sun.scenario.effect.impl.hw.d3d.D3DShaderSource",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"com.sun.scenario.effect.impl.prism.PrRenderer",
+  "methods":[{"name":"createRenderer","parameterTypes":["com.sun.scenario.effect.FilterContext"] }]
+},
+{
+  "name":"com.sun.scenario.effect.impl.prism.ps.PPSLinearConvolveShadowPeer",
+  "methods":[{"name":"<init>","parameterTypes":["com.sun.scenario.effect.FilterContext","com.sun.scenario.effect.impl.Renderer","java.lang.String"] }]
+},
+{
+  "name":"com.sun.scenario.effect.impl.prism.ps.PPSRenderer",
+  "methods":[{"name":"createRenderer","parameterTypes":["com.sun.scenario.effect.FilterContext"] }]
+},
+{
+  "name":"com.sun.xml.internal.stream.XMLInputFactoryImpl",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"java.awt.SequencedEvent"
 },
 {
   "name":"java.beans.Introspector"
@@ -147,12 +280,22 @@
   "name":"java.io.Serializable"
 },
 {
-  "name":"java.lang.Module"
+  "name":"java.lang.Character",
+  "methods":[{"name":"isIdeographic","parameterTypes":["int"] }]
+},
+{
+  "name":"java.lang.Class",
+  "methods":[{"name":"getModule","parameterTypes":[] }]
+},
+{
+  "name":"java.lang.Module",
+  "methods":[{"name":"getResourceAsStream","parameterTypes":["java.lang.String"] }]
 },
 {
   "name":"java.lang.Object",
   "allDeclaredFields":true,
-  "queryAllPublicMethods":true
+  "queryAllPublicMethods":true,
+  "methods":[{"name":"equals","parameterTypes":["java.lang.Object"] }, {"name":"getClass","parameterTypes":[] }, {"name":"hashCode","parameterTypes":[] }, {"name":"notify","parameterTypes":[] }, {"name":"notifyAll","parameterTypes":[] }, {"name":"toString","parameterTypes":[] }, {"name":"wait","parameterTypes":[] }, {"name":"wait","parameterTypes":["long"] }, {"name":"wait","parameterTypes":["long","int"] }]
 },
 {
   "name":"java.lang.ObjectBeanInfo"
@@ -164,11 +307,19 @@
   "name":"java.lang.RuntimePermission"
 },
 {
+  "name":"java.lang.String"
+},
+{
   "name":"java.lang.StringBuilder"
 },
 {
   "name":"java.lang.Thread",
-  "fields":[{"name":"threadLocalRandomProbe"}]
+  "fields":[{"name":"MAX_PRIORITY"}, {"name":"MIN_PRIORITY"}, {"name":"NORM_PRIORITY"}, {"name":"threadLocalRandomProbe"}],
+  "methods":[{"name":"activeCount","parameterTypes":[] }, {"name":"checkAccess","parameterTypes":[] }, {"name":"countStackFrames","parameterTypes":[] }, {"name":"currentThread","parameterTypes":[] }, {"name":"dumpStack","parameterTypes":[] }, {"name":"enumerate","parameterTypes":["java.lang.Thread[]"] }, {"name":"getAllStackTraces","parameterTypes":[] }, {"name":"getContextClassLoader","parameterTypes":[] }, {"name":"getDefaultUncaughtExceptionHandler","parameterTypes":[] }, {"name":"getId","parameterTypes":[] }, {"name":"getName","parameterTypes":[] }, {"name":"getPriority","parameterTypes":[] }, {"name":"getStackTrace","parameterTypes":[] }, {"name":"getState","parameterTypes":[] }, {"name":"getThreadGroup","parameterTypes":[] }, {"name":"getUncaughtExceptionHandler","parameterTypes":[] }, {"name":"holdsLock","parameterTypes":["java.lang.Object"] }, {"name":"interrupt","parameterTypes":[] }, {"name":"interrupted","parameterTypes":[] }, {"name":"isAlive","parameterTypes":[] }, {"name":"isDaemon","parameterTypes":[] }, {"name":"isInterrupted","parameterTypes":[] }, {"name":"isVirtual","parameterTypes":[] }, {"name":"join","parameterTypes":[] }, {"name":"join","parameterTypes":["long"] }, {"name":"join","parameterTypes":["long","int"] }, {"name":"join","parameterTypes":["java.time.Duration"] }, {"name":"ofPlatform","parameterTypes":[] }, {"name":"ofVirtual","parameterTypes":[] }, {"name":"onSpinWait","parameterTypes":[] }, {"name":"resume","parameterTypes":[] }, {"name":"setContextClassLoader","parameterTypes":["java.lang.ClassLoader"] }, {"name":"setDaemon","parameterTypes":["boolean"] }, {"name":"setDefaultUncaughtExceptionHandler","parameterTypes":["java.lang.Thread$UncaughtExceptionHandler"] }, {"name":"setName","parameterTypes":["java.lang.String"] }, {"name":"setPriority","parameterTypes":["int"] }, {"name":"setUncaughtExceptionHandler","parameterTypes":["java.lang.Thread$UncaughtExceptionHandler"] }, {"name":"sleep","parameterTypes":["long"] }, {"name":"sleep","parameterTypes":["long","int"] }, {"name":"sleep","parameterTypes":["java.time.Duration"] }, {"name":"start","parameterTypes":[] }, {"name":"startVirtualThread","parameterTypes":["java.lang.Runnable"] }, {"name":"stop","parameterTypes":[] }, {"name":"suspend","parameterTypes":[] }, {"name":"threadId","parameterTypes":[] }, {"name":"toString","parameterTypes":[] }, {"name":"yield","parameterTypes":[] }]
+},
+{
+  "name":"java.lang.Throwable",
+  "methods":[{"name":"addSuppressed","parameterTypes":["java.lang.Throwable"] }, {"name":"fillInStackTrace","parameterTypes":[] }, {"name":"getCause","parameterTypes":[] }, {"name":"getLocalizedMessage","parameterTypes":[] }, {"name":"getMessage","parameterTypes":[] }, {"name":"getStackTrace","parameterTypes":[] }, {"name":"getSuppressed","parameterTypes":[] }, {"name":"initCause","parameterTypes":["java.lang.Throwable"] }, {"name":"printStackTrace","parameterTypes":[] }, {"name":"printStackTrace","parameterTypes":["java.io.PrintStream"] }, {"name":"printStackTrace","parameterTypes":["java.io.PrintWriter"] }, {"name":"setStackTrace","parameterTypes":["java.lang.StackTraceElement[]"] }]
 },
 {
   "name":"java.lang.invoke.CallSite"
@@ -184,11 +335,20 @@
   "methods":[{"name":"<init>","parameterTypes":["java.lang.String","java.lang.String"] }]
 },
 {
+  "name":"java.nio.ByteBuffer",
+  "methods":[{"name":"order","parameterTypes":["java.nio.ByteOrder"] }]
+},
+{
+  "name":"java.nio.ByteOrder",
+  "methods":[{"name":"nativeOrder","parameterTypes":[] }]
+},
+{
   "name":"java.nio.charset.Charset",
   "methods":[{"name":"valueOf","parameterTypes":["java.lang.String"] }]
 },
 {
-  "name":"java.nio.file.SimpleFileVisitor"
+  "name":"java.nio.file.SimpleFileVisitor",
+  "methods":[{"name":"preVisitDirectory","parameterTypes":["java.lang.Object","java.nio.file.attribute.BasicFileAttributes"] }, {"name":"visitFileFailed","parameterTypes":["java.lang.Object","java.io.IOException"] }]
 },
 {
   "name":"java.security.AlgorithmParametersSpi"
@@ -206,10 +366,19 @@
   "name":"java.security.SecurityPermission"
 },
 {
+  "name":"java.security.interfaces.RSAPrivateKey"
+},
+{
+  "name":"java.security.interfaces.RSAPublicKey"
+},
+{
   "name":"java.sql.Date"
 },
 {
   "name":"java.sql.Timestamp"
+},
+{
+  "name":"java.util.Date"
 },
 {
   "name":"java.util.List",
@@ -223,7 +392,8 @@
   "name":"java.util.PropertyPermission"
 },
 {
-  "name":"java.util.TimerTask"
+  "name":"java.util.TimerTask",
+  "methods":[{"name":"cancel","parameterTypes":[] }, {"name":"scheduledExecutionTime","parameterTypes":[] }]
 },
 {
   "name":"java.util.concurrent.ForkJoinTask",
@@ -252,6 +422,159 @@
   "name":"java.util.zip.DeflaterInputStream"
 },
 {
+  "name":"javafx.animation.AnimationTimer"
+},
+{
+  "name":"javafx.animation.Interpolator"
+},
+{
+  "name":"javafx.application.Application",
+  "fields":[{"name":"STYLESHEET_CASPIAN"}, {"name":"STYLESHEET_MODENA"}],
+  "methods":[{"name":"getHostServices","parameterTypes":[] }, {"name":"getParameters","parameterTypes":[] }, {"name":"getUserAgentStylesheet","parameterTypes":[] }, {"name":"init","parameterTypes":[] }, {"name":"launch","parameterTypes":["java.lang.Class","java.lang.String[]"] }, {"name":"launch","parameterTypes":["java.lang.String[]"] }, {"name":"notifyPreloader","parameterTypes":["javafx.application.Preloader$PreloaderNotification"] }, {"name":"setUserAgentStylesheet","parameterTypes":["java.lang.String"] }, {"name":"stop","parameterTypes":[] }]
+},
+{
+  "name":"javafx.fxml.FXMLLoader"
+},
+{
+  "name":"javafx.geometry.Insets",
+  "queryAllPublicMethods":true,
+  "queryAllPublicConstructors":true,
+  "methods":[{"name":"<init>","parameterTypes":["double","double","double","double"] }]
+},
+{
+  "name":"javafx.geometry.Pos",
+  "methods":[{"name":"valueOf","parameterTypes":["java.lang.String"] }]
+},
+{
+  "name":"javafx.scene.Camera"
+},
+{
+  "name":"javafx.scene.Group"
+},
+{
+  "name":"javafx.scene.Node",
+  "queryAllDeclaredMethods":true,
+  "methods":[{"name":"getId","parameterTypes":[] }, {"name":"setId","parameterTypes":["java.lang.String"] }]
+},
+{
+  "name":"javafx.scene.ParallelCamera"
+},
+{
+  "name":"javafx.scene.Parent",
+  "queryAllDeclaredMethods":true
+},
+{
+  "name":"javafx.scene.Scene"
+},
+{
+  "name":"javafx.scene.control.Control",
+  "queryAllDeclaredMethods":true
+},
+{
+  "name":"javafx.scene.control.Labeled"
+},
+{
+  "name":"javafx.scene.control.Menu",
+  "queryAllDeclaredMethods":true,
+  "queryAllPublicConstructors":true,
+  "methods":[{"name":"<init>","parameterTypes":[] }, {"name":"getItems","parameterTypes":[] }]
+},
+{
+  "name":"javafx.scene.control.MenuBar",
+  "queryAllDeclaredMethods":true,
+  "queryAllPublicConstructors":true,
+  "methods":[{"name":"<init>","parameterTypes":[] }, {"name":"getMenus","parameterTypes":[] }]
+},
+{
+  "name":"javafx.scene.control.MenuItem",
+  "queryAllDeclaredMethods":true,
+  "queryAllPublicConstructors":true,
+  "methods":[{"name":"<init>","parameterTypes":[] }, {"name":"getId","parameterTypes":[] }, {"name":"setId","parameterTypes":["java.lang.String"] }, {"name":"setMnemonicParsing","parameterTypes":["boolean"] }, {"name":"setOnAction","parameterTypes":["javafx.event.EventHandler"] }, {"name":"setText","parameterTypes":["java.lang.String"] }]
+},
+{
+  "name":"javafx.scene.control.SeparatorMenuItem",
+  "queryAllPublicConstructors":true,
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"javafx.scene.effect.Effect"
+},
+{
+  "name":"javafx.scene.image.Image"
+},
+{
+  "name":"javafx.scene.input.Clipboard"
+},
+{
+  "name":"javafx.scene.layout.Pane",
+  "queryAllDeclaredMethods":true,
+  "methods":[{"name":"getChildren","parameterTypes":[] }]
+},
+{
+  "name":"javafx.scene.layout.Region",
+  "queryAllDeclaredMethods":true,
+  "methods":[{"name":"setPrefHeight","parameterTypes":["double"] }, {"name":"setPrefWidth","parameterTypes":["double"] }]
+},
+{
+  "name":"javafx.scene.layout.StackPane",
+  "queryAllDeclaredMethods":true,
+  "queryAllPublicConstructors":true,
+  "methods":[{"name":"<init>","parameterTypes":[] }, {"name":"getAlignment","parameterTypes":["javafx.scene.Node"] }, {"name":"getAlignment","parameterTypes":["javafx.scene.Parent"] }, {"name":"getAlignment","parameterTypes":["javafx.scene.control.Control"] }, {"name":"getAlignment","parameterTypes":["javafx.scene.control.MenuBar"] }, {"name":"getAlignment","parameterTypes":["javafx.scene.control.Skinnable"] }, {"name":"getAlignment","parameterTypes":["javafx.scene.layout.Region"] }, {"name":"getAlignment","parameterTypes":["javafx.scene.web.WebView"] }, {"name":"isAlignment","parameterTypes":["javafx.scene.Parent"] }, {"name":"isAlignment","parameterTypes":["javafx.scene.control.Control"] }, {"name":"isAlignment","parameterTypes":["javafx.scene.control.MenuBar"] }, {"name":"isAlignment","parameterTypes":["javafx.scene.control.Skinnable"] }, {"name":"isAlignment","parameterTypes":["javafx.scene.layout.Region"] }, {"name":"isAlignment","parameterTypes":["javafx.scene.web.WebView"] }, {"name":"setAlignment","parameterTypes":["java.lang.Object","java.lang.String"] }, {"name":"setAlignment","parameterTypes":["javafx.css.Styleable","java.lang.String"] }, {"name":"setAlignment","parameterTypes":["javafx.event.EventTarget","java.lang.String"] }, {"name":"setAlignment","parameterTypes":["javafx.scene.Node","java.lang.String"] }, {"name":"setAlignment","parameterTypes":["javafx.scene.Node","javafx.geometry.Pos"] }, {"name":"setAlignment","parameterTypes":["javafx.scene.Parent","java.lang.String"] }, {"name":"setAlignment","parameterTypes":["javafx.scene.Parent","javafx.geometry.Pos"] }, {"name":"setAlignment","parameterTypes":["javafx.scene.control.Control","java.lang.String"] }, {"name":"setAlignment","parameterTypes":["javafx.scene.control.Control","javafx.geometry.Pos"] }, {"name":"setAlignment","parameterTypes":["javafx.scene.control.MenuBar","java.lang.String"] }, {"name":"setAlignment","parameterTypes":["javafx.scene.control.MenuBar","javafx.geometry.Pos"] }, {"name":"setAlignment","parameterTypes":["javafx.scene.control.Skinnable","java.lang.String"] }, {"name":"setAlignment","parameterTypes":["javafx.scene.control.Skinnable","javafx.geometry.Pos"] }, {"name":"setAlignment","parameterTypes":["javafx.scene.layout.Region","java.lang.String"] }, {"name":"setAlignment","parameterTypes":["javafx.scene.layout.Region","javafx.geometry.Pos"] }, {"name":"setAlignment","parameterTypes":["javafx.scene.web.WebView","java.lang.String"] }, {"name":"setAlignment","parameterTypes":["javafx.scene.web.WebView","javafx.geometry.Pos"] }, {"name":"setMargin","parameterTypes":["javafx.scene.Node","javafx.geometry.Insets"] }, {"name":"setMargin","parameterTypes":["javafx.scene.Parent","javafx.geometry.Insets"] }, {"name":"setMargin","parameterTypes":["javafx.scene.web.WebView","javafx.geometry.Insets"] }]
+},
+{
+  "name":"javafx.scene.shape.LineTo"
+},
+{
+  "name":"javafx.scene.shape.MoveTo"
+},
+{
+  "name":"javafx.scene.shape.Path"
+},
+{
+  "name":"javafx.scene.shape.PathElement"
+},
+{
+  "name":"javafx.scene.shape.Rectangle"
+},
+{
+  "name":"javafx.scene.shape.SVGPath"
+},
+{
+  "name":"javafx.scene.shape.Shape"
+},
+{
+  "name":"javafx.scene.text.Font"
+},
+{
+  "name":"javafx.scene.text.Text"
+},
+{
+  "name":"javafx.scene.transform.Transform"
+},
+{
+  "name":"javafx.scene.web.WebView",
+  "queryAllDeclaredMethods":true
+},
+{
+  "name":"javafx.stage.PopupWindow"
+},
+{
+  "name":"javafx.stage.Stage"
+},
+{
+  "name":"javafx.stage.Window"
+},
+{
+  "name":"javax.imageio.spi.ImageReaderSpi"
+},
+{
+  "name":"javax.imageio.spi.ImageReaderWriterSpi",
+  "methods":[{"name":"getFileSuffixes","parameterTypes":[] }, {"name":"getFormatNames","parameterTypes":[] }, {"name":"getMIMETypes","parameterTypes":[] }]
+},
+{
+  "name":"javax.imageio.spi.ImageWriterSpi"
+},
+{
   "name":"javax.security.auth.x500.X500Principal",
   "fields":[{"name":"thisX500Name"}],
   "methods":[{"name":"<init>","parameterTypes":["sun.security.x509.X500Name"] }]
@@ -263,7 +586,27 @@
   "name":"jdk.internal.misc.Unsafe"
 },
 {
+  "name":"org.apache.commons.io.monitor.FileAlterationListenerAdaptor",
+  "methods":[{"name":"onDirectoryChange","parameterTypes":["java.io.File"] }, {"name":"onDirectoryCreate","parameterTypes":["java.io.File"] }, {"name":"onDirectoryDelete","parameterTypes":["java.io.File"] }, {"name":"onFileCreate","parameterTypes":["java.io.File"] }, {"name":"onFileDelete","parameterTypes":["java.io.File"] }, {"name":"onStart","parameterTypes":["org.apache.commons.io.monitor.FileAlterationObserver"] }, {"name":"onStop","parameterTypes":["org.apache.commons.io.monitor.FileAlterationObserver"] }]
+},
+{
   "name":"org.eclipse.core.runtime.FileLocator"
+},
+{
+  "name":"sun.awt.Symbol",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"sun.awt.windows.WingDings",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"sun.java2d.marlin.DMarlinRenderingEngine",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"sun.misc.Unsafe",
+  "fields":[{"name":"theUnsafe"}]
 },
 {
   "name":"sun.security.pkcs12.PKCS12KeyStore",
@@ -283,6 +626,18 @@
 },
 {
   "name":"sun.security.provider.DSA$SHA256withDSA",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"sun.security.provider.JavaKeyStore$DualFormatJKS",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"sun.security.provider.JavaKeyStore$JKS",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"sun.security.provider.MD5",
   "methods":[{"name":"<init>","parameterTypes":[] }]
 },
 {
@@ -310,6 +665,10 @@
   "methods":[{"name":"<init>","parameterTypes":[] }]
 },
 {
+  "name":"sun.security.provider.certpath.PKIXCertPathValidator",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
   "name":"sun.security.rsa.PSSParameters",
   "methods":[{"name":"<init>","parameterTypes":[] }]
 },
@@ -326,6 +685,10 @@
   "methods":[{"name":"<init>","parameterTypes":[] }]
 },
 {
+  "name":"sun.security.rsa.RSASignature$SHA256withRSA",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
   "name":"sun.security.ssl.KeyManagerFactoryImpl$SunX509",
   "methods":[{"name":"<init>","parameterTypes":[] }]
 },
@@ -336,6 +699,9 @@
 {
   "name":"sun.security.ssl.TrustManagerFactoryImpl$PKIXFactory",
   "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"sun.security.util.ObjectIdentifier"
 },
 {
   "name":"sun.security.x509.AuthorityInfoAccessExtension",
@@ -352,6 +718,9 @@
 {
   "name":"sun.security.x509.CRLDistributionPointsExtension",
   "methods":[{"name":"<init>","parameterTypes":["java.lang.Boolean","java.lang.Object"] }]
+},
+{
+  "name":"sun.security.x509.CertificateExtensions"
 },
 {
   "name":"sun.security.x509.CertificatePoliciesExtension",
@@ -386,10 +755,22 @@
   "methods":[{"name":"<init>","parameterTypes":["java.lang.Boolean","java.lang.Object"] }]
 },
 {
+  "name":"wxdgaming.mariadb.ApplicationMain",
+  "allDeclaredFields":true,
+  "allPublicFields":true,
+  "queryAllDeclaredMethods":true,
+  "queryAllPublicMethods":true,
+  "queryAllDeclaredConstructors":true,
+  "methods":[{"name":"<init>","parameterTypes":[] }, {"name":"initGraalvm","parameterTypes":[] }, {"name":"lambda$main$0","parameterTypes":[] }, {"name":"lambda$main$1","parameterTypes":["wxdgaming.tailfn.ConsoleController"] }, {"name":"lambda$main$2","parameterTypes":[] }, {"name":"main","parameterTypes":["java.lang.String[]"] }, {"name":"startDb","parameterTypes":["boolean"] }]
+},
+{
   "name":"wxdgaming.mariadb.DbConfig",
   "allDeclaredFields":true,
+  "allPublicFields":true,
+  "queryAllDeclaredMethods":true,
   "queryAllPublicMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }, {"name":"getAutoBakSqlTimeM","parameterTypes":[] }, {"name":"getBgColor","parameterTypes":[] }, {"name":"getDataBases","parameterTypes":[] }, {"name":"getFontSize","parameterTypes":[] }, {"name":"getPort","parameterTypes":[] }, {"name":"getPwd","parameterTypes":[] }, {"name":"getServerTitle","parameterTypes":[] }, {"name":"getShowMaxLine","parameterTypes":[] }, {"name":"getUser","parameterTypes":[] }, {"name":"getWebPort","parameterTypes":[] }, {"name":"isAutoWarp","parameterTypes":[] }, {"name":"setAutoBakSqlTimeM","parameterTypes":["int"] }, {"name":"setAutoWarp","parameterTypes":["boolean"] }, {"name":"setBgColor","parameterTypes":["java.lang.String"] }, {"name":"setDataBases","parameterTypes":["java.lang.String"] }, {"name":"setFontSize","parameterTypes":["int"] }, {"name":"setPort","parameterTypes":["int"] }, {"name":"setPwd","parameterTypes":["java.lang.String"] }, {"name":"setServerTitle","parameterTypes":["java.lang.String"] }, {"name":"setShowMaxLine","parameterTypes":["int"] }, {"name":"setUser","parameterTypes":["java.lang.String"] }, {"name":"setWebPort","parameterTypes":["int"] }]
+  "queryAllDeclaredConstructors":true,
+  "methods":[{"name":"<init>","parameterTypes":[] }, {"name":"getAutoBakSqlTimeM","parameterTypes":[] }, {"name":"getBgColor","parameterTypes":[] }, {"name":"getDataBases","parameterTypes":[] }, {"name":"getFontSize","parameterTypes":[] }, {"name":"getPort","parameterTypes":[] }, {"name":"getPwd","parameterTypes":[] }, {"name":"getServerTitle","parameterTypes":[] }, {"name":"getShowMaxLine","parameterTypes":[] }, {"name":"getUser","parameterTypes":[] }, {"name":"getWebPort","parameterTypes":[] }, {"name":"isAutoWarp","parameterTypes":[] }, {"name":"loadYaml","parameterTypes":[] }, {"name":"save","parameterTypes":[] }, {"name":"serverName","parameterTypes":[] }, {"name":"setAutoBakSqlTimeM","parameterTypes":["int"] }, {"name":"setAutoWarp","parameterTypes":["boolean"] }, {"name":"setBgColor","parameterTypes":["java.lang.String"] }, {"name":"setDataBases","parameterTypes":["java.lang.String"] }, {"name":"setFontSize","parameterTypes":["int"] }, {"name":"setPort","parameterTypes":["int"] }, {"name":"setPwd","parameterTypes":["java.lang.String"] }, {"name":"setServerTitle","parameterTypes":["java.lang.String"] }, {"name":"setShowMaxLine","parameterTypes":["int"] }, {"name":"setUser","parameterTypes":["java.lang.String"] }, {"name":"setWebPort","parameterTypes":["int"] }]
 },
 {
   "name":"wxdgaming.mariadb.DbConfigBeanInfo"
@@ -398,8 +779,179 @@
   "name":"wxdgaming.mariadb.DbConfigCustomizer"
 },
 {
+  "name":"wxdgaming.mariadb.GraalvmUtil",
+  "allDeclaredFields":true,
+  "allPublicFields":true,
+  "queryAllDeclaredMethods":true,
+  "queryAllPublicMethods":true,
+  "queryAllDeclaredConstructors":true,
+  "methods":[{"name":"<init>","parameterTypes":[] }, {"name":"fetchProcessId","parameterTypes":[] }, {"name":"jarClasses","parameterTypes":["java.lang.String[]"] }, {"name":"jarResources","parameterTypes":[] }, {"name":"javaClassPath","parameterTypes":[] }, {"name":"lambda$jarClasses$0","parameterTypes":["java.lang.String[]","java.lang.String"] }, {"name":"lambda$jarResources$1","parameterTypes":["java.lang.String","java.lang.String"] }, {"name":"lambda$jarResources$2","parameterTypes":["java.lang.String","java.lang.String"] }, {"name":"write","parameterTypes":["int","java.lang.String"] }, {"name":"writeFile","parameterTypes":["java.io.File","java.lang.String"] }]
+},
+{
+  "name":"wxdgaming.mariadb.GraalvmUtil$Tuple",
+  "allDeclaredFields":true,
+  "allPublicFields":true,
+  "queryAllDeclaredMethods":true,
+  "queryAllPublicMethods":true,
+  "queryAllDeclaredConstructors":true,
+  "methods":[{"name":"<init>","parameterTypes":[] }, {"name":"<init>","parameterTypes":["java.lang.Object","java.lang.Object"] }]
+},
+{
+  "name":"wxdgaming.mariadb.PlatformRunnable",
+  "allDeclaredFields":true,
+  "allPublicFields":true,
+  "queryAllDeclaredMethods":true,
+  "queryAllPublicMethods":true,
+  "queryAllDeclaredConstructors":true,
+  "methods":[{"name":"<init>","parameterTypes":[] }, {"name":"run","parameterTypes":[] }]
+},
+{
+  "name":"wxdgaming.mariadb.ReflectAction",
+  "allDeclaredFields":true,
+  "allPublicFields":true,
+  "queryAllDeclaredMethods":true,
+  "queryAllPublicMethods":true,
+  "queryAllDeclaredConstructors":true,
+  "methods":[{"name":"<init>","parameterTypes":[] }, {"name":"action","parameterTypes":["java.lang.Class","java.lang.String"] }, {"name":"actionField","parameterTypes":["java.lang.Class"] }, {"name":"actionMethod","parameterTypes":["java.lang.Class"] }, {"name":"getNotConstructor0List","parameterTypes":[] }, {"name":"lambda$resourceStreams$0","parameterTypes":["java.io.File"] }, {"name":"listFileStream","parameterTypes":["java.lang.String","int","java.util.function.Predicate"] }, {"name":"listFileStream","parameterTypes":["java.nio.file.Path","int","java.util.function.Predicate"] }, {"name":"of","parameterTypes":[] }, {"name":"resourceStreams","parameterTypes":["java.lang.ClassLoader","java.lang.String"] }, {"name":"resourceStreams","parameterTypes":["java.lang.String"] }]
+},
+{
+  "name":"wxdgaming.mariadb.RunAsync",
+  "allDeclaredFields":true,
+  "allPublicFields":true,
+  "queryAllDeclaredMethods":true,
+  "queryAllPublicMethods":true,
+  "queryAllDeclaredConstructors":true,
+  "methods":[{"name":"<init>","parameterTypes":[] }, {"name":"async","parameterTypes":["wxdgaming.mariadb.PlatformRunnable"] }, {"name":"lambda$async$0","parameterTypes":["wxdgaming.mariadb.PlatformRunnable"] }]
+},
+{
+  "name":"wxdgaming.mariadb.server.DBFactory",
+  "allDeclaredFields":true,
+  "allPublicFields":true,
+  "queryAllDeclaredMethods":true,
+  "queryAllPublicMethods":true,
+  "queryAllDeclaredConstructors":true,
+  "methods":[{"name":"<init>","parameterTypes":[] }, {"name":"getConfigBuilder","parameterTypes":[] }, {"name":"getIns","parameterTypes":[] }, {"name":"getMyDB","parameterTypes":[] }, {"name":"init","parameterTypes":["java.lang.String","int","java.lang.String","java.lang.String"] }, {"name":"isStarted","parameterTypes":[] }, {"name":"print","parameterTypes":[] }, {"name":"sourceSql","parameterTypes":["java.lang.String"] }, {"name":"stop","parameterTypes":[] }]
+},
+{
   "name":"wxdgaming.mariadb.server.LogbackResetTimeFilter",
   "queryAllPublicMethods":true,
   "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"wxdgaming.mariadb.server.MyDB",
+  "allDeclaredFields":true,
+  "allPublicFields":true,
+  "queryAllDeclaredMethods":true,
+  "queryAllPublicMethods":true,
+  "queryAllDeclaredConstructors":true,
+  "methods":[{"name":"<init>","parameterTypes":[] }, {"name":"<init>","parameterTypes":["ch.vorburger.mariadb4j.DBConfiguration","java.lang.String","java.lang.String","java.lang.String","int"] }, {"name":"bakSql","parameterTypes":[] }, {"name":"check","parameterTypes":["java.lang.Throwable"] }, {"name":"getBak_Time","parameterTypes":[] }, {"name":"getData_base","parameterTypes":[] }, {"name":"getPwd","parameterTypes":[] }, {"name":"getTimer","parameterTypes":[] }, {"name":"getUser","parameterTypes":[] }, {"name":"initBakTimer","parameterTypes":[] }, {"name":"initDb","parameterTypes":[] }, {"name":"start","parameterTypes":[] }, {"name":"stop","parameterTypes":[] }]
+},
+{
+  "name":"wxdgaming.mariadb.server.MyDB$1",
+  "allDeclaredFields":true,
+  "allPublicFields":true,
+  "queryAllDeclaredMethods":true,
+  "queryAllPublicMethods":true,
+  "queryAllDeclaredConstructors":true,
+  "methods":[{"name":"<init>","parameterTypes":[] }, {"name":"<init>","parameterTypes":["wxdgaming.mariadb.server.MyDB"] }, {"name":"run","parameterTypes":[] }]
+},
+{
+  "name":"wxdgaming.mariadb.server.WebService",
+  "allDeclaredFields":true,
+  "allPublicFields":true,
+  "queryAllDeclaredMethods":true,
+  "queryAllPublicMethods":true,
+  "queryAllDeclaredConstructors":true,
+  "methods":[{"name":"<init>","parameterTypes":[] }, {"name":"clearFile","parameterTypes":["java.lang.String"] }, {"name":"getHttpHandler","parameterTypes":[] }, {"name":"getHttpServer","parameterTypes":[] }, {"name":"getIns","parameterTypes":[] }, {"name":"lambda$new$0","parameterTypes":["com.sun.net.httpserver.HttpExchange"] }, {"name":"lambda$start$1","parameterTypes":["com.sun.net.httpserver.HttpExchange"] }, {"name":"lambda$start$2","parameterTypes":["com.sun.net.httpserver.HttpExchange"] }, {"name":"lambda$start$3","parameterTypes":["com.sun.net.httpserver.HttpExchange"] }, {"name":"lambda$start$4","parameterTypes":[] }, {"name":"lambda$start$5","parameterTypes":["com.sun.net.httpserver.HttpExchange"] }, {"name":"start","parameterTypes":["int"] }, {"name":"stop","parameterTypes":[] }]
+},
+{
+  "name":"wxdgaming.mariadb.server.WebService$1",
+  "allDeclaredFields":true,
+  "allPublicFields":true,
+  "queryAllDeclaredMethods":true,
+  "queryAllPublicMethods":true,
+  "queryAllDeclaredConstructors":true,
+  "methods":[{"name":"<init>","parameterTypes":[] }, {"name":"<init>","parameterTypes":["wxdgaming.mariadb.server.WebService"] }, {"name":"postVisitDirectory","parameterTypes":["java.lang.Object","java.io.IOException"] }, {"name":"postVisitDirectory","parameterTypes":["java.nio.file.Path","java.io.IOException"] }, {"name":"visitFile","parameterTypes":["java.lang.Object","java.nio.file.attribute.BasicFileAttributes"] }, {"name":"visitFile","parameterTypes":["java.nio.file.Path","java.nio.file.attribute.BasicFileAttributes"] }]
+},
+{
+  "name":"wxdgaming.tailfn.ConsoleApplication",
+  "allDeclaredFields":true,
+  "allPublicFields":true,
+  "queryAllDeclaredMethods":true,
+  "queryAllPublicMethods":true,
+  "queryAllDeclaredConstructors":true,
+  "methods":[{"name":"<init>","parameterTypes":[] }, {"name":"closeSelect","parameterTypes":["javafx.stage.Stage"] }, {"name":"lambda$closeSelect$2","parameterTypes":["javafx.scene.control.Alert","javafx.stage.Stage","javafx.scene.control.ButtonType"] }, {"name":"lambda$null$1","parameterTypes":["javafx.stage.Stage"] }, {"name":"lambda$setIcon$3","parameterTypes":["javafx.stage.Stage","java.awt.event.ActionEvent"] }, {"name":"lambda$start$0","parameterTypes":["javafx.stage.Stage","javafx.stage.WindowEvent"] }, {"name":"setIcon","parameterTypes":["javafx.stage.Stage"] }, {"name":"start","parameterTypes":["javafx.stage.Stage"] }]
+},
+{
+  "name":"wxdgaming.tailfn.ConsoleController",
+  "allDeclaredFields":true,
+  "allPublicFields":true,
+  "queryAllDeclaredMethods":true,
+  "queryAllPublicMethods":true,
+  "queryAllDeclaredConstructors":true,
+  "methods":[{"name":"<init>","parameterTypes":[] }, {"name":"addMenuItem","parameterTypes":["int","java.lang.String","java.lang.Runnable"] }, {"name":"addMenuItem","parameterTypes":["int","javafx.scene.control.MenuItem"] }, {"name":"addMenuItem","parameterTypes":["java.lang.String","java.lang.Runnable"] }, {"name":"init","parameterTypes":[] }, {"name":"initTailFN","parameterTypes":[] }, {"name":"lambda$addMenuItem$6","parameterTypes":["java.lang.Runnable","javafx.event.ActionEvent"] }, {"name":"lambda$init$0","parameterTypes":["java.lang.Thread","java.lang.Throwable"] }, {"name":"lambda$init$1","parameterTypes":[] }, {"name":"lambda$init$5","parameterTypes":["javafx.beans.value.ObservableValue","javafx.concurrent.Worker$State","javafx.concurrent.Worker$State"] }, {"name":"lambda$null$2","parameterTypes":[] }, {"name":"lambda$null$3","parameterTypes":[] }, {"name":"lambda$null$4","parameterTypes":[] }, {"name":"readHtml","parameterTypes":[] }, {"name":"setBg","parameterTypes":[] }, {"name":"setDarkBgColor","parameterTypes":["javafx.event.ActionEvent"] }, {"name":"setFontSize","parameterTypes":[] }, {"name":"setLightBgColor","parameterTypes":["javafx.event.ActionEvent"] }, {"name":"setSpanNonWarp","parameterTypes":["javafx.event.ActionEvent"] }, {"name":"setSpanWarp","parameterTypes":["javafx.event.ActionEvent"] }, {"name":"setWarp","parameterTypes":[] }, {"name":"setZoomIn","parameterTypes":["javafx.event.ActionEvent"] }, {"name":"setZoomOut","parameterTypes":["javafx.event.ActionEvent"] }, {"name":"setZoomReset","parameterTypes":["javafx.event.ActionEvent"] }]
+},
+{
+  "name":"wxdgaming.tailfn.ConsoleOutput",
+  "allDeclaredFields":true,
+  "allPublicFields":true,
+  "queryAllDeclaredMethods":true,
+  "queryAllPublicMethods":true,
+  "queryAllDeclaredConstructors":true,
+  "methods":[{"name":"<init>","parameterTypes":[] }, {"name":"<init>","parameterTypes":["javafx.scene.web.WebView"] }, {"name":"add","parameterTypes":["java.lang.String"] }, {"name":"build","parameterTypes":["javafx.scene.web.WebView"] }, {"name":"lambda$new$0","parameterTypes":[] }, {"name":"lambda$run$1","parameterTypes":["java.lang.String"] }, {"name":"run","parameterTypes":[] }]
+},
+{
+  "name":"wxdgaming.tailfn.GraalvmUtil",
+  "allDeclaredFields":true,
+  "allPublicFields":true,
+  "queryAllDeclaredMethods":true,
+  "queryAllPublicMethods":true,
+  "queryAllDeclaredConstructors":true,
+  "methods":[{"name":"<init>","parameterTypes":[] }, {"name":"appendFile","parameterTypes":["java.lang.String"] }, {"name":"readFile","parameterTypes":["java.io.File"] }, {"name":"readFile","parameterTypes":["java.lang.String"] }, {"name":"readInputStream","parameterTypes":["java.io.InputStream"] }, {"name":"writeFile","parameterTypes":["java.nio.file.Path","java.lang.String"] }]
+},
+{
+  "name":"wxdgaming.tailfn.TailFN",
+  "allDeclaredFields":true,
+  "allPublicFields":true,
+  "queryAllDeclaredMethods":true,
+  "queryAllPublicMethods":true,
+  "queryAllDeclaredConstructors":true,
+  "methods":[{"name":"<init>","parameterTypes":[] }, {"name":"<init>","parameterTypes":["java.lang.String","int","java.util.function.Consumer"] }, {"name":"<init>","parameterTypes":["java.nio.file.Path","int","java.util.function.Consumer"] }, {"name":"readLastLine","parameterTypes":[] }, {"name":"skipped","parameterTypes":[] }, {"name":"stop","parameterTypes":[] }]
+},
+{
+  "name":"wxdgaming.tailfn.TailFN$1",
+  "allDeclaredFields":true,
+  "allPublicFields":true,
+  "queryAllDeclaredMethods":true,
+  "queryAllPublicMethods":true,
+  "queryAllDeclaredConstructors":true,
+  "methods":[{"name":"<init>","parameterTypes":[] }, {"name":"<init>","parameterTypes":["wxdgaming.tailfn.TailFN","java.nio.file.Path"] }, {"name":"onFileChange","parameterTypes":["java.io.File"] }]
+},
+{
+  "name":"wxdgaming.tailfn.TestMain",
+  "allDeclaredFields":true,
+  "allPublicFields":true,
+  "queryAllDeclaredMethods":true,
+  "queryAllPublicMethods":true,
+  "queryAllDeclaredConstructors":true,
+  "methods":[{"name":"<init>","parameterTypes":[] }, {"name":"main","parameterTypes":["java.lang.String[]"] }]
+},
+{
+  "name":"wxdgaming.tailfn.Throw",
+  "allDeclaredFields":true,
+  "allPublicFields":true,
+  "queryAllDeclaredMethods":true,
+  "queryAllPublicMethods":true,
+  "queryAllDeclaredConstructors":true,
+  "methods":[{"name":"<init>","parameterTypes":[] }, {"name":"<init>","parameterTypes":["java.lang.String"] }, {"name":"<init>","parameterTypes":["java.lang.String","java.lang.Throwable"] }, {"name":"filterInvoke","parameterTypes":["java.lang.Throwable"] }, {"name":"isInterruptedException","parameterTypes":["java.lang.Throwable"] }, {"name":"message","parameterTypes":["java.lang.String","java.lang.Throwable"] }, {"name":"of","parameterTypes":["java.lang.String","java.lang.Throwable"] }, {"name":"of","parameterTypes":["java.lang.Throwable"] }, {"name":"ofString","parameterTypes":["java.lang.StackTraceElement"] }, {"name":"ofString","parameterTypes":["java.lang.StringBuilder","java.lang.StackTraceElement"] }, {"name":"ofString","parameterTypes":["java.lang.StringBuilder","java.lang.Throwable","boolean"] }, {"name":"ofString","parameterTypes":["java.lang.StringBuilder","java.lang.StackTraceElement[]","boolean"] }, {"name":"ofString","parameterTypes":["java.lang.Throwable"] }, {"name":"ofString","parameterTypes":["java.lang.Throwable","boolean"] }, {"name":"revertStackTrace","parameterTypes":["java.lang.StackTraceElement[]"] }, {"name":"toString","parameterTypes":[] }]
+},
+{
+  "name":"wxdgaming.tailfn.ViewConfig",
+  "allDeclaredFields":true,
+  "allPublicFields":true,
+  "queryAllDeclaredMethods":true,
+  "queryAllPublicMethods":true,
+  "queryAllDeclaredConstructors":true,
+  "methods":[{"name":"<init>","parameterTypes":[] }, {"name":"getBgColor","parameterTypes":[] }, {"name":"getFontSize","parameterTypes":[] }, {"name":"getShowMaxLine","parameterTypes":[] }, {"name":"isAutoWarp","parameterTypes":[] }, {"name":"loadYaml","parameterTypes":["java.lang.String"] }, {"name":"save","parameterTypes":[] }, {"name":"setAutoWarp","parameterTypes":["boolean"] }, {"name":"setBgColor","parameterTypes":["java.lang.String"] }, {"name":"setFontSize","parameterTypes":["int"] }, {"name":"setShowMaxLine","parameterTypes":["int"] }]
 }
 ]

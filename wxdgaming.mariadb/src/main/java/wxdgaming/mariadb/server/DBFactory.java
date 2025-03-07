@@ -72,7 +72,6 @@ public class DBFactory {
         log.info(stringBuilder.toString());
     }
 
-
     public void stop() {
         try {
             GraalvmUtil.write(0, "停止");

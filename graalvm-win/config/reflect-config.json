@@ -503,6 +503,9 @@
   "name":"javafx.scene.image.Image"
 },
 {
+  "name":"javafx.scene.image.ImageView"
+},
+{
   "name":"javafx.scene.input.Clipboard"
 },
 {
@@ -761,7 +764,7 @@
   "queryAllDeclaredMethods":true,
   "queryAllPublicMethods":true,
   "queryAllDeclaredConstructors":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }, {"name":"clearFile","parameterTypes":["java.lang.String"] }, {"name":"initGraalvm","parameterTypes":[] }, {"name":"lambda$main$0","parameterTypes":[] }, {"name":"lambda$main$1","parameterTypes":[] }, {"name":"lambda$main$1","parameterTypes":["wxdgaming.tailfn.ConsoleController"] }, {"name":"lambda$main$2","parameterTypes":[] }, {"name":"lambda$main$3","parameterTypes":["wxdgaming.tailfn.ConsoleController"] }, {"name":"lambda$main$4","parameterTypes":[] }, {"name":"main","parameterTypes":["java.lang.String[]"] }, {"name":"startDb","parameterTypes":[] }, {"name":"startDb","parameterTypes":["boolean"] }]
+  "methods":[{"name":"<init>","parameterTypes":[] }, {"name":"clearFile","parameterTypes":["java.lang.String"] }, {"name":"initGraalvm","parameterTypes":[] }, {"name":"lambda$main$0","parameterTypes":[] }, {"name":"lambda$main$1","parameterTypes":[] }, {"name":"lambda$main$1","parameterTypes":["wxdgaming.tailfn.ConsoleController"] }, {"name":"lambda$main$2","parameterTypes":[] }, {"name":"lambda$main$3","parameterTypes":[] }, {"name":"lambda$main$3","parameterTypes":["wxdgaming.tailfn.ConsoleController"] }, {"name":"lambda$main$4","parameterTypes":[] }, {"name":"lambda$main$5","parameterTypes":["wxdgaming.tailfn.ConsoleController"] }, {"name":"lambda$main$6","parameterTypes":[] }, {"name":"main","parameterTypes":["java.lang.String[]"] }, {"name":"startDb","parameterTypes":[] }, {"name":"startDb","parameterTypes":["boolean"] }]
 },
 {
   "name":"wxdgaming.mariadb.ApplicationMain$1",
@@ -889,7 +892,7 @@
   "queryAllDeclaredMethods":true,
   "queryAllPublicMethods":true,
   "queryAllDeclaredConstructors":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }, {"name":"closeSelect","parameterTypes":["javafx.stage.Stage"] }, {"name":"lambda$closeSelect$2","parameterTypes":["javafx.scene.control.Alert","javafx.stage.Stage","javafx.scene.control.ButtonType"] }, {"name":"lambda$null$1","parameterTypes":["javafx.stage.Stage"] }, {"name":"lambda$setIcon$3","parameterTypes":["javafx.stage.Stage","java.awt.event.ActionEvent"] }, {"name":"lambda$start$0","parameterTypes":["javafx.stage.Stage","javafx.stage.WindowEvent"] }, {"name":"setIcon","parameterTypes":["javafx.stage.Stage"] }, {"name":"start","parameterTypes":["javafx.stage.Stage"] }]
+  "methods":[{"name":"<init>","parameterTypes":[] }, {"name":"closeSelect","parameterTypes":["javafx.stage.Stage"] }, {"name":"lambda$closeSelect$1","parameterTypes":["javafx.stage.Stage"] }, {"name":"lambda$closeSelect$2","parameterTypes":["javafx.scene.control.Alert","javafx.scene.control.ButtonType","javafx.scene.control.ButtonType","javafx.stage.Stage","javafx.scene.control.ButtonType"] }, {"name":"lambda$closeSelect$2","parameterTypes":["javafx.scene.control.Alert","javafx.stage.Stage","javafx.scene.control.ButtonType"] }, {"name":"lambda$null$1","parameterTypes":["javafx.stage.Stage"] }, {"name":"lambda$setIcon$3","parameterTypes":["javafx.stage.Stage"] }, {"name":"lambda$setIcon$3","parameterTypes":["javafx.stage.Stage","java.awt.event.ActionEvent"] }, {"name":"lambda$setIcon$4","parameterTypes":["javafx.stage.Stage","java.awt.event.ActionEvent"] }, {"name":"lambda$start$0","parameterTypes":["javafx.stage.Stage","javafx.stage.WindowEvent"] }, {"name":"setIcon","parameterTypes":["javafx.stage.Stage"] }, {"name":"start","parameterTypes":["javafx.stage.Stage"] }]
 },
 {
   "name":"wxdgaming.tailfn.ConsoleController",
@@ -898,7 +901,7 @@
   "queryAllDeclaredMethods":true,
   "queryAllPublicMethods":true,
   "queryAllDeclaredConstructors":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }, {"name":"addMenuItem","parameterTypes":["int","java.lang.String","java.lang.Runnable"] }, {"name":"addMenuItem","parameterTypes":["int","javafx.scene.control.MenuItem"] }, {"name":"addMenuItem","parameterTypes":["java.lang.String","java.lang.Runnable"] }, {"name":"addSeparatorMenuItem","parameterTypes":["int"] }, {"name":"init","parameterTypes":[] }, {"name":"initTailFN","parameterTypes":[] }, {"name":"lambda$addMenuItem$6","parameterTypes":["java.lang.Runnable","javafx.event.ActionEvent"] }, {"name":"lambda$init$0","parameterTypes":["java.lang.Thread","java.lang.Throwable"] }, {"name":"lambda$init$1","parameterTypes":[] }, {"name":"lambda$init$5","parameterTypes":["javafx.beans.value.ObservableValue","javafx.concurrent.Worker$State","javafx.concurrent.Worker$State"] }, {"name":"lambda$null$2","parameterTypes":[] }, {"name":"lambda$null$3","parameterTypes":[] }, {"name":"lambda$null$4","parameterTypes":[] }, {"name":"readHtml","parameterTypes":[] }, {"name":"setBg","parameterTypes":[] }, {"name":"setDarkBgColor","parameterTypes":["javafx.event.ActionEvent"] }, {"name":"setFontSize","parameterTypes":[] }, {"name":"setLightBgColor","parameterTypes":["javafx.event.ActionEvent"] }, {"name":"setSpanNonWarp","parameterTypes":["javafx.event.ActionEvent"] }, {"name":"setSpanWarp","parameterTypes":["javafx.event.ActionEvent"] }, {"name":"setWarp","parameterTypes":[] }, {"name":"setZoomIn","parameterTypes":["javafx.event.ActionEvent"] }, {"name":"setZoomOut","parameterTypes":["javafx.event.ActionEvent"] }, {"name":"setZoomReset","parameterTypes":["javafx.event.ActionEvent"] }]
+  "methods":[{"name":"<init>","parameterTypes":[] }, {"name":"addMenuItem","parameterTypes":["int","java.lang.String","java.lang.Runnable"] }, {"name":"addMenuItem","parameterTypes":["int","javafx.scene.control.MenuItem"] }, {"name":"addMenuItem","parameterTypes":["java.lang.String","java.lang.Runnable"] }, {"name":"addSeparatorMenuItem","parameterTypes":["int"] }, {"name":"init","parameterTypes":[] }, {"name":"initTailFN","parameterTypes":[] }, {"name":"lambda$addMenuItem$6","parameterTypes":["java.lang.Runnable","javafx.event.ActionEvent"] }, {"name":"lambda$init$0","parameterTypes":["java.lang.Thread","java.lang.Throwable"] }, {"name":"lambda$init$1","parameterTypes":[] }, {"name":"lambda$init$2","parameterTypes":[] }, {"name":"lambda$init$3","parameterTypes":[] }, {"name":"lambda$init$4","parameterTypes":[] }, {"name":"lambda$init$5","parameterTypes":["javafx.beans.value.ObservableValue","javafx.concurrent.Worker$State","javafx.concurrent.Worker$State"] }, {"name":"lambda$null$2","parameterTypes":[] }, {"name":"lambda$null$3","parameterTypes":[] }, {"name":"lambda$null$4","parameterTypes":[] }, {"name":"readHtml","parameterTypes":[] }, {"name":"setBg","parameterTypes":[] }, {"name":"setDarkBgColor","parameterTypes":["javafx.event.ActionEvent"] }, {"name":"setFontSize","parameterTypes":[] }, {"name":"setLightBgColor","parameterTypes":["javafx.event.ActionEvent"] }, {"name":"setSpanNonWarp","parameterTypes":["javafx.event.ActionEvent"] }, {"name":"setSpanWarp","parameterTypes":["javafx.event.ActionEvent"] }, {"name":"setWarp","parameterTypes":[] }, {"name":"setZoomIn","parameterTypes":["javafx.event.ActionEvent"] }, {"name":"setZoomOut","parameterTypes":["javafx.event.ActionEvent"] }, {"name":"setZoomReset","parameterTypes":["javafx.event.ActionEvent"] }]
 },
 {
   "name":"wxdgaming.tailfn.ConsoleOutput",
@@ -916,7 +919,7 @@
   "queryAllDeclaredMethods":true,
   "queryAllPublicMethods":true,
   "queryAllDeclaredConstructors":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }, {"name":"appendFile","parameterTypes":["java.lang.String"] }, {"name":"readFile","parameterTypes":["java.io.File"] }, {"name":"readFile","parameterTypes":["java.lang.String"] }, {"name":"readInputStream","parameterTypes":["java.io.InputStream"] }, {"name":"writeFile","parameterTypes":["java.nio.file.Path","java.lang.String"] }]
+  "methods":[{"name":"<init>","parameterTypes":[] }, {"name":"appendFile","parameterTypes":["java.lang.String"] }, {"name":"classPath","parameterTypes":[] }, {"name":"readFile","parameterTypes":["java.io.File"] }, {"name":"readFile","parameterTypes":["java.lang.String"] }, {"name":"readInputStream","parameterTypes":["java.io.InputStream"] }, {"name":"writeFile","parameterTypes":["java.nio.file.Path","java.lang.String"] }]
 },
 {
   "name":"wxdgaming.tailfn.TailFN",

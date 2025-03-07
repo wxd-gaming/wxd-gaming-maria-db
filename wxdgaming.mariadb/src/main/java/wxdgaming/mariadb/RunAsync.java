@@ -1,12 +1,15 @@
 package wxdgaming.mariadb;
 
 
+import lombok.extern.slf4j.Slf4j;
+
 /**
  * 异步执行
  *
  * @author: wxd-gaming(無心道, 15388152619)
  * @version: 2025-02-12 09:27
  **/
+@Slf4j
 public class RunAsync {
 
 
@@ -15,7 +18,7 @@ public class RunAsync {
             try {
                 runnable.run();
             } catch (Throwable e) {
-                e.printStackTrace(System.out);
+                log.error(runnable.toString(), e);
             }
         });
         thread.start();

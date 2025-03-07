@@ -26,32 +26,36 @@ public class ApplicationMain {
             ConsoleApplication.__iconName = "db-icon.png";
 
             ConsoleController.initEndCallback = (consoleController) -> {
-                try {
-                    initGraalvm();
-                    DbConfig.loadYaml();
 
-                    WebService.getIns().start(DbConfig.ins.getWebPort());
-                    Thread.sleep(500);
-                    startDb();
+                consoleController.addMenuItem(0, "备份数据库", () -> {
+                    DBFactory.getIns().getMyDB().bakSql();
+                });
 
-                    consoleController.addMenuItem(0, "备份数据库", () -> {
+                consoleController.addSeparatorMenuItem(consoleController.menu_file.getItems().size() - 1);
+                consoleController.addMenuItem(consoleController.menu_file.getItems().size() - 1, "清档数据库", () -> {
+                    RunAsync.async(() -> {
                         DBFactory.getIns().getMyDB().bakSql();
+                        DBFactory.getIns().stop();
+                        clearFile("data-base/data");
+                        startDb();
                     });
-                    consoleController.addSeparatorMenuItem(consoleController.menu_file.getItems().size() - 1);
-                    consoleController.addMenuItem(consoleController.menu_file.getItems().size() - 1, "清档数据库", () -> {
-                        Thread.ofPlatform().start(() -> {
-                            DBFactory.getIns().getMyDB().bakSql();
-                            DBFactory.getIns().stop();
-                            clearFile("data-base/data");
-                            startDb();
-                        });
-                    });
-                    consoleController.addSeparatorMenuItem(consoleController.menu_file.getItems().size() - 1);
-                } catch (Throwable throwable) {
-                    log.info("数据库启动异常", throwable);
-                    GraalvmUtil.write(99, "启动异常：" + throwable.toString());
-                    Runtime.getRuntime().exit(99);
-                }
+                });
+                consoleController.addSeparatorMenuItem(consoleController.menu_file.getItems().size() - 1);
+
+                RunAsync.async(() -> {
+                    try {
+                        DbConfig.loadYaml();
+                        WebService.getIns().start(DbConfig.ins.getWebPort());
+                        Thread.sleep(500);
+                        startDb();
+                        initGraalvm();
+                        Runtime.getRuntime().addShutdownHook(new Thread(() -> DBFactory.getIns().stop()));
+                    } catch (Throwable throwable) {
+                        log.info("数据库启动异常", throwable);
+                        GraalvmUtil.write(99, "启动异常：" + throwable.toString());
+                        Runtime.getRuntime().exit(99);
+                    }
+                });
             };
             Application.launch(ConsoleApplication.class);
         });

@@ -15569,6 +15569,8 @@
   }, {
     "pattern":"\\Qfxplugins.dll\\E"
   }, {
+    "pattern":"\\Qgame-logo.png\\E"
+  }, {
     "pattern":"\\Qglass.dll\\E"
   }, {
     "pattern":"\\Qglib-lite.dll\\E"
@@ -31887,6 +31889,8 @@
   }, {
     "pattern":"\\Qwxdgaming/tailfn/ConsoleOutput.class\\E"
   }, {
+    "pattern":"\\Qwxdgaming/tailfn/DiyAlert.class\\E"
+  }, {
     "pattern":"\\Qwxdgaming/tailfn/GraalvmUtil.class\\E"
   }, {
     "pattern":"\\Qwxdgaming/tailfn/TailFN$1.class\\E"
@@ -31902,6 +31906,32 @@
     "pattern":"\\Qwxdgaming/tailfn/\\E"
   }, {
     "pattern":"\\Qwxdgaming/tailfn/console.fxml\\E"
+  }, {
+    "pattern":"\\Qwxdgaming/tailfn/dark/\\E"
+  }, {
+    "pattern":"\\Qwxdgaming/tailfn/dark/close.png\\E"
+  }, {
+    "pattern":"\\Qwxdgaming/tailfn/dark/max.png\\E"
+  }, {
+    "pattern":"\\Qwxdgaming/tailfn/dark/min.png\\E"
+  }, {
+    "pattern":"\\Qwxdgaming/tailfn/dark/theme-alert.css\\E"
+  }, {
+    "pattern":"\\Qwxdgaming/tailfn/dark/theme.css\\E"
+  }, {
+    "pattern":"\\Qwxdgaming/tailfn/diyalert.fxml\\E"
+  }, {
+    "pattern":"\\Qwxdgaming/tailfn/light/\\E"
+  }, {
+    "pattern":"\\Qwxdgaming/tailfn/light/close.png\\E"
+  }, {
+    "pattern":"\\Qwxdgaming/tailfn/light/max.png\\E"
+  }, {
+    "pattern":"\\Qwxdgaming/tailfn/light/min.png\\E"
+  }, {
+    "pattern":"\\Qwxdgaming/tailfn/light/theme-alert.css\\E"
+  }, {
+    "pattern":"\\Qwxdgaming/tailfn/light/theme.css\\E"
   }, {
     "pattern":"\\Qwxdgaming\\E"
   }, {
@@ -31923,7 +31953,7 @@
     "locales":["", "de", "en", "es", "fr", "it", "ja", "ko", "pt-BR", "sv", "und", "zh-CN", "zh-TW"]
   }, {
     "name":"com/sun/javafx/scene/control/skin/resources/controls",
-    "locales":["", "und", "zh-CN"]
+    "locales":["und", "zh-CN"]
   }, {
     "name":"sun.awt.resources.awt",
     "classNames":["sun.awt.resources.awt", "sun.awt.resources.awt_zh_CN"]
